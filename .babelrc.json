@@ -1,0 +1,14 @@
+{
+  "presets": ["react-app"],
+  "env": {
+    "production": {
+      "plugins": [
+        ["module:fast-async", { "spec": true }],
+        "@babel/transform-react-constant-elements",
+        "@babel/transform-react-inline-elements",
+        "closure-elimination",
+        "loop-optimizer"
+      ]
+    }
+  }
+}
