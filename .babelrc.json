@@ -1,5 +1,11 @@
 {
   "presets": ["react-app"],
+  "plugins": [
+    [
+      "babel-plugin-hoist-constant-jsx-attributes",
+      { "freezeObjects": "development" }
+    ]
+  ],
   "env": {
     "production": {
       "plugins": [
