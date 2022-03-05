@@ -73,6 +73,8 @@ const typescriptRules = {
 
   "etc/no-misused-generics": "off",
   "etc/no-t": "off",
+  "typescript-sort-keys/interface": "error",
+  "typescript-sort-keys/string-enum": "error",
 }
 
 module.exports = {
@@ -81,7 +83,6 @@ module.exports = {
   },
 
   extends: ["hardcore", "prettier"],
-
   ignorePatterns: ["build", "node_modules"],
 
   overrides: [
@@ -92,9 +93,7 @@ module.exports = {
       },
 
       extends: ["hardcore", "hardcore/ts", "prettier"],
-
       files: "*.ts",
-
       parser: "@typescript-eslint/parser",
 
       parserOptions: {
@@ -120,7 +119,6 @@ module.exports = {
       ],
 
       files: "*.tsx",
-
       parser: "@typescript-eslint/parser",
 
       parserOptions: {
@@ -129,9 +127,7 @@ module.exports = {
         },
 
         ecmaVersion: "latest",
-
         project: "./tsconfig.json",
-
         sourceType: "module",
       },
 
@@ -202,7 +198,6 @@ module.exports = {
     sourceType: "module",
   },
 
-  plugins: ["prettier", "sort-keys-fix"],
-
+  plugins: ["prettier", "sort-keys-fix", "typescript-sort-keys"],
   rules: generalRules,
 }
