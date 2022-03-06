@@ -9,10 +9,10 @@ import CategoryCarCard from "./CategoryCarCard"
 import CategoryOptions from "./CategoryOptions"
 import type { Sort } from "./types"
 
-interface CategoryProps {
+type CategoryProps = Readonly<{
   category: string
   displayName: string
-}
+}>
 
 type BasicDetailsCar = Readonly<{
   date: number
@@ -132,7 +132,7 @@ const Gallery = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 `
 
-const Category = ({ displayName, category }: Readonly<CategoryProps>) => {
+const Category = ({ displayName, category }: CategoryProps) => {
   const [search, setSearch] = useState("")
   const [sort, setSort] = useState<Sort>("newest")
 

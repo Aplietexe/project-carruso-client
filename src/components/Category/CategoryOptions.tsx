@@ -6,17 +6,17 @@ import SearchForm from "../SearchForm"
 
 import type { Sort } from "./types"
 
-interface CategoryOptionsProps {
+type CategoryOptionsProps = Readonly<{
   search: string
   setSearch: SetState<string>
   setSort: SetState<Sort>
-}
+}>
 
 const CategoryOptions = ({
   search,
   setSearch,
   setSort,
-}: Readonly<CategoryOptionsProps>) => {
+}: CategoryOptionsProps) => {
   const handleChange: ChangeEventHandler<HTMLSelectElement> = useCallback(
     (event) => {
       setSort(event.target.value as Sort)

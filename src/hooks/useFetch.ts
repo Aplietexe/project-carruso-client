@@ -3,8 +3,6 @@
 import type { DependencyList } from "react"
 import { useState, useEffect } from "react"
 
-import type { DeepReadonly } from "../helpers"
-
 type JsonValue =
   | boolean
   | number
@@ -12,9 +10,9 @@ type JsonValue =
   | readonly JsonValue[]
   | { readonly [x: string]: JsonValue }
 
-interface UseFetchOptions {
-  parameters?: { [k: string]: string }
-}
+type UseFetchOptions = Readonly<{
+  parameters?: { readonly [k: string]: string }
+}>
 
 type UseFetchReturnValue<T> =
   | {
@@ -35,7 +33,7 @@ type UseFetchReturnValue<T> =
 
 const useFetch = <T extends JsonValue>(
   path: string,
-  { parameters = {} }: DeepReadonly<UseFetchOptions>,
+  { parameters = {} }: UseFetchOptions,
   dependencies: DependencyList,
 ): UseFetchReturnValue<T> => {
   const [isLoading, setIsLoading] = useState(true)

@@ -7,10 +7,10 @@ import { type DeepReadonly } from "../../../helpers"
 interface ImageAsBackgroundProps {
   source: string
 }
-interface PaneProps {
+type PaneProps = DeepReadonly<{
   children: ReactNode
   imageSource: string
-}
+}>
 
 const ImageAsBackground = styled.div<ImageAsBackgroundProps>`
   background-image: url(${({ source }) => source});
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
   padding: 1rem 2rem;
 `
 
-const Pane = ({ imageSource, children }: DeepReadonly<PaneProps>) => (
+const Pane = ({ imageSource, children }: PaneProps) => (
   <Row>
     <Col lg={{ offset: 2, span: 8 }} md={12} xl={{ offset: 3, span: 6 }}>
       <Row>

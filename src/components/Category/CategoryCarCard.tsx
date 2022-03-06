@@ -2,17 +2,13 @@ import { Card } from "react-bootstrap"
 
 import { formatNumber } from "../../helpers"
 
-interface CategoryCarCardProps {
+type CategoryCarCardProps = Readonly<{
   image: string
   price: number
   title: string
-}
+}>
 
-const CategoryCarCard = ({
-  image,
-  price,
-  title,
-}: Readonly<CategoryCarCardProps>) => (
+const CategoryCarCard = ({ image, price, title }: CategoryCarCardProps) => (
   <Card>
     <Card.Img src={image} variant="top" />
     <Card.Body>

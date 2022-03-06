@@ -22,19 +22,19 @@ const SeachInput = styled(FormControl)`
   padding-left: 2.375rem;
 `
 
-interface SearchFormProps {
+type SearchFormProps = Readonly<{
   className?: string
   placeholder: string
   search: string
   setSearch: SetState<string>
-}
+}>
 
 const SearchForm = ({
   className,
   placeholder,
   search,
   setSearch,
-}: Readonly<SearchFormProps>) => {
+}: SearchFormProps) => {
   const handleChange: ChangeEventHandler<HTMLInputElement> = useCallback(
     (event) => {
       setSearch(event.target.value)
