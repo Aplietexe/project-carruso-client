@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
+import type { Dispatch, SetStateAction } from "react"
 
-export type DeepReadonly<T> = T extends (infer R)[]
+type DeepReadonly<T> = T extends (infer R)[]
   ? readonly DeepReadonly<R>[]
   : T extends Function
   ? T
@@ -8,36 +8,6 @@ export type DeepReadonly<T> = T extends (infer R)[]
   ? { readonly [P in keyof T]: DeepReadonly<T[P]> }
   : T
 
-const getCurrentBreakpoints = () => {
-  const width = window.innerWidth
+type SetState<T> = Dispatch<SetStateAction<T>>
 
-  /* eslint-disable @typescript-eslint/naming-convention */
-  /* eslint-disable sort-keys-fix/sort-keys-fix */
-  return {
-    xxl: width >= 1400,
-    xl: width >= 1200,
-    lg: width >= 992,
-    md: width >= 768,
-    sm: width >= 786,
-  }
-  /* eslint-enable @typescript-eslint/naming-convention */
-  /* eslint-enable sort-keys-fix/sort-keys-fix */
-}
-
-export const useBreakpoints = () => {
-  const [breakpoints, setBreakpoints] = useState(getCurrentBreakpoints)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setBreakpoints(getCurrentBreakpoints())
-    }
-
-    window.addEventListener("resize", handleResize)
-
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
-
-  return breakpoints
-}
+export type { DeepReadonly, SetState }

@@ -1,7 +1,7 @@
 import { Col, Container, Image as ImageComponent, Row } from "react-bootstrap"
 
 import welcomeImage from "../../assets/images/welcome-image.webp"
-import { useBreakpoints } from "../../helpers"
+import { useBreakpoints } from "../../hooks"
 
 import HomeInfoLarge from "./sizes/HomeInfoLarge"
 import HomeInfoSmall from "./sizes/HomeInfoSmall"
