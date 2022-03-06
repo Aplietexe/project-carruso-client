@@ -23,17 +23,13 @@ const Links = styled(Col)`
   );
   grid-gap: var(--grid-layout-gap);
 
-  padding: 0;
-
-  div {
-    text-align: center;
-  }
+  align-items: center;
 `
 
 const FooterRight = () => (
   <>
-    <Row>
-      <Col className="text-center p-2">PORTAL PARA VENDEDOR / AGENCIA</Col>
+    <Row className="mb-3">
+      <Col>PORTAL PARA VENDEDOR / AGENCIA</Col>
     </Row>
     <Row>
       <Links>

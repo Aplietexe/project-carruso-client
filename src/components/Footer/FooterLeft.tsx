@@ -12,9 +12,7 @@ const FooterLeft = () => (
       </Col>
     </Row>
     <Row className="mt-2">
-      <Col className="text-center">
-        2019 © SEIR SAS DE CV. Derechos reservados
-      </Col>
+      <Col>2019 © SEIR SAS DE CV. Derechos reservados</Col>
     </Row>
     <SocialIcons />
   </>

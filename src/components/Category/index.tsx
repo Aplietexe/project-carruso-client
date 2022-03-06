@@ -161,8 +161,8 @@ const Category = ({ displayName, category }: CategoryProps) => {
   if (isLoading) return <div>Loading</div>
 
   return (
-    <Container>
-      <h2 className="fs-4 text-center mt-5 mb-3">{displayName}</h2>
+    <Container className="my-5">
+      <h2 className="fs-4 text-center mb-3">{displayName}</h2>
       <CategoryOptions
         search={search}
         setSearch={setSearch}

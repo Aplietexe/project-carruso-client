@@ -1,25 +1,22 @@
-import { Col, Container, Row } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 import styled from "styled-components"
 
 import FooterLeft from "./FooterLeft"
 import FooterRight from "./FooterRight"
 
-const StyledContainer = styled(Container)`
+const StyledRow = styled(Row)`
   font-size: 14px;
-  color: white;
 `
 
 const Footer = () => (
-  <StyledContainer fluid>
-    <Row className="bg-primary mt-3 py-3 align-items-center">
-      <Col sm={6}>
-        <FooterLeft />
-      </Col>
-      <Col className="mt-3 mt-sm-0" sm={6}>
-        <FooterRight />
-      </Col>
-    </Row>
-  </StyledContainer>
+  <StyledRow className="bg-primary py-3 align-items-center text-center text-white">
+    <Col sm={6}>
+      <FooterLeft />
+    </Col>
+    <Col className="mt-3 mt-sm-0" sm={6}>
+      <FooterRight />
+    </Col>
+  </StyledRow>
 )
 
 export default Footer

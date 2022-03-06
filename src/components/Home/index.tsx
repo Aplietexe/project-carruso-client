@@ -1,4 +1,4 @@
-import { Col, Container, Image as ImageComponent, Row } from "react-bootstrap"
+import { Image as ImageComponent, Row } from "react-bootstrap"
 
 import welcomeImage from "../../assets/images/welcome-image.webp"
 import { useBreakpoints } from "../../hooks"
@@ -10,18 +10,14 @@ const Home = () => {
   const breakpoints = useBreakpoints()
 
   return (
-    <Container fluid>
+    <>
       <Row>
-        <Col>
-          <Row>
-            <Col className="p-0">
-              <ImageComponent className="w-100 p-0" src={welcomeImage} />
-            </Col>
-          </Row>
-          {breakpoints.md ? <HomeInfoLarge /> : <HomeInfoSmall />}
-        </Col>
+        <ImageComponent className="w-100 p-0" src={welcomeImage} />
       </Row>
-    </Container>
+      <Row className="my-5">
+        {breakpoints.md ? <HomeInfoLarge /> : <HomeInfoSmall />}
+      </Row>
+    </>
   )
 }
 

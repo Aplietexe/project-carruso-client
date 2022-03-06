@@ -4,6 +4,7 @@ import {
   Container,
   Nav,
   Image as ImageComponent,
+  Row,
 } from "react-bootstrap"
 import styled from "styled-components"
 
@@ -41,29 +42,31 @@ const Header = () => {
   const [search, setSearch] = useState("")
 
   return (
-    <Navbar bg="light" expand="md">
-      <StyledContainer fluid>
-        <Navbar.Brand className="me-0">
-          <ImageComponent className="py-3" fluid src={carrusoLogo} />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="w-100 justify-content-evenly my-2 my-md-0"
-            navbarScroll
-          >
-            <StyledLink>CARRUSO SEMINUEVOS</StyledLink>
-            <StyledLink>CARRUSO UTILITARIOS</StyledLink>
-            <StyledLink>CARRUSO NUEVOS</StyledLink>
-          </Nav>
-          <StyledSearchForm
-            placeholder="Encuentra tu próximo auto"
-            search={search}
-            setSearch={setSearch}
-          />
-        </Navbar.Collapse>
-      </StyledContainer>
-    </Navbar>
+    <Row>
+      <Navbar bg="light" expand="md">
+        <StyledContainer fluid>
+          <Navbar.Brand className="me-0">
+            <ImageComponent className="py-3" fluid src={carrusoLogo} />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="w-100 justify-content-evenly my-2 my-md-0"
+              navbarScroll
+            >
+              <StyledLink>CARRUSO SEMINUEVOS</StyledLink>
+              <StyledLink>CARRUSO UTILITARIOS</StyledLink>
+              <StyledLink>CARRUSO NUEVOS</StyledLink>
+            </Nav>
+            <StyledSearchForm
+              placeholder="Encuentra tu próximo auto"
+              search={search}
+              setSearch={setSearch}
+            />
+          </Navbar.Collapse>
+        </StyledContainer>
+      </Navbar>
+    </Row>
   )
 }
 
