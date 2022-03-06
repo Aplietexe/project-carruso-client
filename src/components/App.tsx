@@ -1,11 +1,12 @@
 import Footer from "./Footer"
+import Category from "./Category"
 import Header from "./Header"
-import Home from "./Home"
+// import Home from "./Home"
 
 const App = () => (
   <>
     <Header />
-    <Home />
+    <Category category="seminew" displayName="CARRUSO-SEMINUEVOS" />
     <Footer />
   </>
 )
