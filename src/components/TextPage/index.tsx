@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap"
 import styled from "styled-components"
 
 import type { DeepReadonly } from "../../helpers"
+import PageTitle from "../PageTitle"
 
 type TextPageProps = DeepReadonly<{
   children: ReactNode
@@ -15,7 +16,7 @@ const StyledText = styled.div`
 
 const TextPage = ({ children, title }: TextPageProps) => (
   <Container className="my-5">
-    <h1 className="display-6 text-center mb-4">{title}</h1>
+    <PageTitle title={title} />
     <StyledText>{children}</StyledText>
   </Container>
 )

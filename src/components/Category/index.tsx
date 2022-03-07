@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap"
 import styled from "styled-components"
 
 import { useFetch } from "../../hooks"
+import PageTitle from "../PageTitle"
 
 import CategoryCarCard from "./CategoryCarCard"
 import CategoryOptions from "./CategoryOptions"
@@ -162,7 +163,7 @@ const Category = ({ displayName, category }: CategoryProps) => {
 
   return (
     <Container className="my-5">
-      <h2 className="fs-4 text-center mb-3">{displayName}</h2>
+      <PageTitle title={displayName} />
       <CategoryOptions
         search={search}
         setSearch={setSearch}

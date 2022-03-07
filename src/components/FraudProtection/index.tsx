@@ -4,14 +4,13 @@ import fraudProtectionImage from "../../assets/images/fraud-protection/fraud-pro
 import fingerprintMagnifyingGlassImage from "../../assets/images/fraud-protection/fingerprint-magnifying-glass-image.webp"
 import carSaleImage from "../../assets/images/fraud-protection/car-sale-image.webp"
 import Banner from "../Banner"
+import PageTitle from "../PageTitle"
 
 const FraudProtection = () => (
   <>
     <Banner image={fraudProtectionImage} />
     <Container>
-      <h1 className="display-1 text-center mb-5">
-        En carruso nos preocupamos por tu seguridad
-      </h1>
+      <PageTitle title="En carruso nos preocupamos por tu seguridad" />
       <Row className="align-items-center">
         <Col className="p-0" md={3}>
           <ImageComponent
