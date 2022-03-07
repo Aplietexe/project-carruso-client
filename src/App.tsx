@@ -9,6 +9,7 @@ import TermsAndConditions from "./pages/TermsAndConditions"
 import Home from "./pages/Home"
 import FraudProtection from "./pages/FraudProtection"
 import Contact from "./pages/Contact"
+import CreditRequest from "./pages/CreditRequest"
 
 const App = () => (
   <Container fluid>
@@ -19,7 +20,8 @@ const App = () => (
     {/* <TermsAndConditions /> */}
     {/* <PrivacyNotice /> */}
     {/* <Warranty /> */}
-    <Contact />
+    {/* <Contact /> */}
+    <CreditRequest />
     <Footer />
   </Container>
 )
