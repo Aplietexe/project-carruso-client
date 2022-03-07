@@ -1,12 +1,7 @@
-import { Button, FormControl, Form, FloatingLabel } from "react-bootstrap"
+import { FormControl, Form, FloatingLabel } from "react-bootstrap"
 import styled from "styled-components"
 
-const StyledButton = styled(Button)`
-  display: block;
-  margin-inline: auto;
-  width: 40%;
-  min-width: 100px;
-`
+import SubmitButton from "../../components/SubmitButton"
 
 const Textarea = styled(FormControl)`
   height: 200px !important;
@@ -23,16 +18,14 @@ const ContactForm = () => (
     <FloatingLabel className="mb-4" controlId="phone" label="Teléfono">
       <FormControl placeholder="Ingresa tu teléfono" />
     </FloatingLabel>
-    <FloatingLabel className="mb-4" controlId="message" label="Mensaje">
+    <FloatingLabel controlId="message" label="Mensaje">
       <Textarea
         as="textarea"
         className="form-control"
         placeholder="Escribe aquí tu mensaje"
       />
     </FloatingLabel>
-    <StyledButton type="submit" variant="primary">
-      Enviar mensaje
-    </StyledButton>
+    <SubmitButton>Enviar mensaje</SubmitButton>
   </Form>
 )
 
