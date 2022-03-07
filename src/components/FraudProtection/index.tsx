@@ -3,12 +3,11 @@ import { Col, Container, Image as ImageComponent, Row } from "react-bootstrap"
 import fraudProtectionImage from "../../assets/images/fraud-protection/fraud-protection-banner.webp"
 import fingerprintMagnifyingGlassImage from "../../assets/images/fraud-protection/fingerprint-magnifying-glass-image.webp"
 import carSaleImage from "../../assets/images/fraud-protection/car-sale-image.webp"
+import Banner from "../Banner"
 
 const FraudProtection = () => (
   <>
-    <Row>
-      <ImageComponent className="w-100 p-0" fluid src={fraudProtectionImage} />
-    </Row>
+    <Banner image={fraudProtectionImage} />
     <Container>
       <h1 className="display-1 text-center mb-5">
         En carruso nos preocupamos por tu seguridad
