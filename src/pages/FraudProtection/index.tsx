@@ -3,8 +3,8 @@ import { Col, Container, Image as ImageComponent, Row } from "react-bootstrap"
 import fraudProtectionImage from "../../assets/images/fraud-protection/fraud-protection-banner.webp"
 import fingerprintMagnifyingGlassImage from "../../assets/images/fraud-protection/fingerprint-magnifying-glass-image.webp"
 import carSaleImage from "../../assets/images/fraud-protection/car-sale-image.webp"
-import Banner from "../Banner"
-import PageTitle from "../PageTitle"
+import Banner from "../../components/Banner"
+import PageTitle from "../../components/PageTitle"
 
 const FraudProtection = () => (
   <>

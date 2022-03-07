@@ -1,4 +1,4 @@
-import TextPage from "../TextPage"
+import TextPage from "../../layouts/TextPage"
 
 import text from "./text"
 

@@ -9,7 +9,7 @@ import {
 import styled from "styled-components"
 
 import carrusoLogo from "../../assets/images/header/carruso-logo.webp"
-import SearchForm from "../SearchForm"
+import SearchForm from "../../components/SearchForm"
 
 const StyledLink = styled(Nav.Link)`
   color: var(--bs-primary) !important;

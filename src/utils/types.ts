@@ -10,7 +10,4 @@ type DeepReadonly<T> = T extends (infer R)[]
 
 type SetState<T> = Dispatch<SetStateAction<T>>
 
-const formatNumber = (number: number) =>
-  new Intl.NumberFormat("es-MX").format(Math.round(number))
-
-export { type DeepReadonly, type SetState, formatNumber }
+export type { DeepReadonly, SetState }

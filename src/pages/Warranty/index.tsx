@@ -1,12 +1,12 @@
 import { Container, Image as ImageComponent, Row } from "react-bootstrap"
 import styled from "styled-components"
 
-import Banner from "../Banner"
+import Banner from "../../components/Banner"
 import warrantyBanner from "../../assets/images/warranty/warranty-banner.webp"
 import legalWarrantyImage from "../../assets/images/warranty/legal-warranty-image.webp"
 import mechanicalWarrantyImage from "../../assets/images/warranty/mechanical-warranty-image.webp"
 import fairPriceImage from "../../assets/images/warranty/fair-price-image.webp"
-import PageTitle from "../PageTitle"
+import PageTitle from "../../components/PageTitle"
 
 const Wrapper = styled.div`
   display: flex;

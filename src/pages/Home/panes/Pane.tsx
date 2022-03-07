@@ -2,7 +2,7 @@ import type { ReactNode } from "react"
 import { Col, Row } from "react-bootstrap"
 import styled from "styled-components"
 
-import { type DeepReadonly } from "../../../helpers"
+import { type DeepReadonly } from "../../../utils/types"
 
 interface ImageAsBackgroundProps {
   source: string

@@ -3,8 +3,8 @@ import { useMemo, useState } from "react"
 import { Container } from "react-bootstrap"
 import styled from "styled-components"
 
-import { useFetch } from "../../hooks"
-import PageTitle from "../PageTitle"
+import { useFetch } from "../../utils/hooks"
+import PageTitle from "../../components/PageTitle"
 
 import CategoryCarCard from "./CategoryCarCard"
 import CategoryOptions from "./CategoryOptions"

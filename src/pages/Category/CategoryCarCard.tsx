@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap"
 
-import { formatNumber } from "../../helpers"
+import { formatNumber } from "../../utils/helpers"
 
 type CategoryCarCardProps = Readonly<{
   image: string

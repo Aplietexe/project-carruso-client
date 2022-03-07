@@ -1,8 +1,8 @@
 import { Row } from "react-bootstrap"
 
 import welcomeImage from "../../assets/images/home/home-banner.webp"
-import { useBreakpoints } from "../../hooks"
-import Banner from "../Banner"
+import { useBreakpoints } from "../../utils/hooks"
+import Banner from "../../components/Banner"
 
 import HomeInfoLarge from "./sizes/HomeInfoLarge"
 import HomeInfoSmall from "./sizes/HomeInfoSmall"

@@ -1,8 +1,8 @@
 import { type ChangeEventHandler, useCallback } from "react"
 import { Col, FormSelect, InputGroup, Row } from "react-bootstrap"
 
-import type { SetState } from "../../helpers"
-import SearchForm from "../SearchForm"
+import type { SetState } from "../../utils/types"
+import SearchForm from "../../components/SearchForm"
 
 import type { Sort } from "./types"
 

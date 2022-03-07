@@ -1,13 +1,13 @@
 import { Container } from "react-bootstrap"
 
-import Footer from "./Footer"
-import Category from "./Category"
-import Header from "./Header"
-import Warranty from "./Warranty"
-import PrivacyNotice from "./PrivacyNotice"
-import TermsAndConditions from "./TermsAndConditions"
-import Home from "./Home"
-import FraudProtection from "./FraudProtection"
+import Footer from "./layouts/Footer"
+import Category from "./pages/Category"
+import Header from "./layouts/Header"
+import Warranty from "./pages/Warranty"
+import PrivacyNotice from "./pages/PrivacyNotice"
+import TermsAndConditions from "./pages/TermsAndConditions"
+import Home from "./pages/Home"
+import FraudProtection from "./pages/FraudProtection"
 
 const App = () => (
   <Container fluid>

@@ -4,7 +4,7 @@ import { type ChangeEventHandler, useCallback } from "react"
 import { Form, FormGroup, FormControl } from "react-bootstrap"
 import styled from "styled-components"
 
-import type { SetState } from "../../helpers"
+import type { SetState } from "../utils/types"
 
 const SeachIconWrapper = styled.span`
   position: absolute;

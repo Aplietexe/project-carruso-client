@@ -2,8 +2,8 @@ import type { ReactNode } from "react"
 import { Container } from "react-bootstrap"
 import styled from "styled-components"
 
-import type { DeepReadonly } from "../../helpers"
-import PageTitle from "../PageTitle"
+import type { DeepReadonly } from "../../utils/types"
+import PageTitle from "../../components/PageTitle"
 
 type TextPageProps = DeepReadonly<{
   children: ReactNode
