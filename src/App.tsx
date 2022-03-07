@@ -8,6 +8,7 @@ import PrivacyNotice from "./pages/PrivacyNotice"
 import TermsAndConditions from "./pages/TermsAndConditions"
 import Home from "./pages/Home"
 import FraudProtection from "./pages/FraudProtection"
+import Contact from "./pages/Contact"
 
 const App = () => (
   <Container fluid>
@@ -17,7 +18,8 @@ const App = () => (
     {/* <FraudProtection /> */}
     {/* <TermsAndConditions /> */}
     {/* <PrivacyNotice /> */}
-    <Warranty />
+    {/* <Warranty /> */}
+    <Contact />
     <Footer />
   </Container>
 )
