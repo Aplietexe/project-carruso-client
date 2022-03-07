@@ -1,4 +1,4 @@
-import seminewPaneImage from "../../../assets/images/seminew-pane-image.webp"
+import seminewPaneImage from "../../../assets/images/home/seminew-pane-image.webp"
 
 import Pane from "./Pane"
 

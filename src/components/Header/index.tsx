@@ -8,7 +8,7 @@ import {
 } from "react-bootstrap"
 import styled from "styled-components"
 
-import carrusoLogo from "../../assets/images/carruso-logo.webp"
+import carrusoLogo from "../../assets/images/header/carruso-logo.webp"
 import SearchForm from "../SearchForm"
 
 const StyledLink = styled(Nav.Link)`

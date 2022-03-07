@@ -1,6 +1,6 @@
 import { Image as ImageComponent, Row } from "react-bootstrap"
 
-import welcomeImage from "../../assets/images/welcome-image.webp"
+import welcomeImage from "../../assets/images/home/home-banner.webp"
 import { useBreakpoints } from "../../hooks"
 
 import HomeInfoLarge from "./sizes/HomeInfoLarge"

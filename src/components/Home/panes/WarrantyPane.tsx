@@ -1,4 +1,4 @@
-import warrantyPaneImage from "../../../assets/images/warranty-pane-image.webp"
+import warrantyPaneImage from "../../../assets/images/home/warranty-pane-image.webp"
 
 import Pane from "./Pane"
 

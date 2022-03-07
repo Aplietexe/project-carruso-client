@@ -1,4 +1,4 @@
-import requestPaneImage from "../../../assets/images/request-pane-image.webp"
+import requestPaneImage from "../../../assets/images/home/request-pane-image.webp"
 
 import Pane from "./Pane"
 

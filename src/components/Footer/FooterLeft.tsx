@@ -1,6 +1,6 @@
 import { Col, Image as ImageComponent, Row } from "react-bootstrap"
 
-import carrusoLogoWhite from "../../assets/images/carruso-logo-white.webp"
+import carrusoLogoWhite from "../../assets/images/footer/carruso-logo-white.webp"
 
 import SocialIcons from "./SocialIcons"
 
