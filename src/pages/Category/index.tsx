@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import { useMemo, useState } from "react"
 import { Container } from "react-bootstrap"
 import styled from "styled-components"
@@ -16,95 +15,12 @@ type CategoryProps = Readonly<{
 }>
 
 type BasicDetailsCar = Readonly<{
+  _id: string
   date: number
-  id: string
   image: string
   price: number
   title: string
 }>
-
-const mockCars = [
-  {
-    date: Math.floor(Math.random() * 1_000_000),
-    id: "1",
-
-    image:
-      "https://d2j6dbq0eux0bg.cloudfront.net/images/70740525/2941388700.jpg",
-
-    price: Math.floor(Math.random() * 1_000_000),
-    title: "title of car of the first type",
-  },
-  {
-    date: Math.floor(Math.random() * 1_000_000),
-    id: "2",
-
-    image:
-      "https://d2j6dbq0eux0bg.cloudfront.net/images/70740525/2941376339.jpg",
-
-    price: Math.floor(Math.random() * 1_000_000),
-    title: "title of a different car",
-  },
-  {
-    date: Math.floor(Math.random() * 1_000_000),
-    id: "3",
-
-    image:
-      "https://d2j6dbq0eux0bg.cloudfront.net/images/70740525/2941388700.jpg",
-
-    price: Math.floor(Math.random() * 1_000_000),
-    title: "title of car of the first type",
-  },
-  {
-    date: Math.floor(Math.random() * 1_000_000),
-    id: "4",
-
-    image:
-      "https://d2j6dbq0eux0bg.cloudfront.net/images/70740525/2941376339.jpg",
-
-    price: Math.floor(Math.random() * 1_000_000),
-    title: "title of a different car",
-  },
-  {
-    date: Math.floor(Math.random() * 1_000_000),
-    id: "5",
-
-    image:
-      "https://d2j6dbq0eux0bg.cloudfront.net/images/70740525/2941388700.jpg",
-
-    price: Math.floor(Math.random() * 1_000_000),
-    title: "title of car of the first type",
-  },
-  {
-    date: Math.floor(Math.random() * 1_000_000),
-    id: "6",
-
-    image:
-      "https://d2j6dbq0eux0bg.cloudfront.net/images/70740525/2941376339.jpg",
-
-    price: Math.floor(Math.random() * 1_000_000),
-    title: "title of a different car",
-  },
-  {
-    date: Math.floor(Math.random() * 1_000_000),
-    id: "7",
-
-    image:
-      "https://d2j6dbq0eux0bg.cloudfront.net/images/70740525/2941388700.jpg",
-
-    price: Math.floor(Math.random() * 1_000_000),
-    title: "title of car of the first type",
-  },
-  {
-    date: Math.floor(Math.random() * 1_000_000),
-    id: "8",
-
-    image:
-      "https://d2j6dbq0eux0bg.cloudfront.net/images/70740525/2941376339.jpg",
-
-    price: Math.floor(Math.random() * 1_000_000),
-    title: "title of a different car",
-  },
-]
 
 const carMatchesSearch = (car: BasicDetailsCar, search: string): boolean => {
   const title = car.title.toLowerCase().replace(/\s+/gu, "")
@@ -131,24 +47,24 @@ const Gallery = styled.div`
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  .card-img-top {
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+  }
 `
 
 const Category = ({ displayName, category }: CategoryProps) => {
   const [search, setSearch] = useState("")
   const [sort, setSort] = useState<Sort>("newest")
 
-  let { isLoading, error, value } = useFetch<BasicDetailsCar[]>(
+  const { isLoading, error, value } = useFetch<BasicDetailsCar[]>(
     "/cars",
     {
       parameters: { category },
     },
     [category],
   )
-  // dev
-  isLoading = false
-  error = undefined
-  value = mockCars
-  // dev
 
   const processedCars = useMemo(() => {
     if (!value) return undefined
@@ -173,7 +89,7 @@ const Category = ({ displayName, category }: CategoryProps) => {
         {processedCars?.map((car) => (
           <CategoryCarCard
             image={car.image}
-            key={car.id}
+            key={car._id}
             price={car.price}
             title={car.title}
           />

@@ -14,14 +14,14 @@ const Main = () => (
   <Row as="main">
     <Col>
       {/* <Home /> */}
-      {/* <Category category="seminew" displayName="Carruso Seminuevos" /> */}
+      <Category category="seminew" displayName="Carruso Seminuevos" />
       {/* <FraudProtection /> */}
       {/* <TermsAndConditions /> */}
       {/* <PrivacyNotice /> */}
       {/* <Warranty /> */}
       {/* <Contact /> */}
       {/* <CreditRequest /> */}
-      <Car id="622d959a190fbb277c245a79" />
+      {/* <Car id="622d959a190fbb277c245a79" /> */}
     </Col>
   </Row>
 )
