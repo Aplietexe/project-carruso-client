@@ -31,16 +31,26 @@ type UseFetchReturnValue<T> =
       value: undefined
     }
 
+const baseUrl = "http://localhost:5000"
+
+const loadingState = {
+  error: undefined,
+  isLoading: true,
+  value: undefined,
+} as const
+
 const useFetch = <T extends JsonValue>(
   path: string,
-  { parameters = {} }: UseFetchOptions,
+  { parameters }: UseFetchOptions,
   dependencies: DependencyList,
 ): UseFetchReturnValue<T> => {
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string>()
-  const [value, setValue] = useState<JsonValue>()
+  const [state, setState] = useState<UseFetchReturnValue<T>>(loadingState)
 
-  const url = `/api/v1${path}?${new URLSearchParams(parameters).toString()}`
+  const stringParameters = parameters
+    ? `?${new URLSearchParams(parameters).toString()}`
+    : ""
+
+  const url = baseUrl + path + stringParameters
 
   useEffect(() => {
     const controller = new AbortController()
@@ -48,7 +58,7 @@ const useFetch = <T extends JsonValue>(
 
     const request = async () => {
       try {
-        setIsLoading(true)
+        setState(loadingState)
 
         const response = await fetch(url, {
           headers: {
@@ -62,18 +72,22 @@ const useFetch = <T extends JsonValue>(
 
         const json = (await response.json()) as JsonValue
 
-        if (!signal.aborted) {
-          setIsLoading(false)
-          setValue(json)
-        }
+        if (!signal.aborted)
+          setState({
+            error: undefined,
+            isLoading: false,
+            value: json as T,
+          })
       } catch (caughtError) {
-        const newError =
+        const error =
           caughtError instanceof Error ? caughtError.message : "Unknown Error"
 
-        if (!signal.aborted) {
-          setIsLoading(false)
-          setError(newError)
-        }
+        if (!signal.aborted)
+          setState({
+            error,
+            isLoading: false,
+            value: undefined,
+          })
       }
     }
 
@@ -84,7 +98,7 @@ const useFetch = <T extends JsonValue>(
     }
   }, dependencies)
 
-  return { error, isLoading, value } as UseFetchReturnValue<T>
+  return state
 }
 
 export default useFetch
