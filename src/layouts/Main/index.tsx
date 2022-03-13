@@ -21,7 +21,7 @@ const Main = () => (
       {/* <Warranty /> */}
       {/* <Contact /> */}
       {/* <CreditRequest /> */}
-      <Car id="1" />
+      <Car id="622d959a190fbb277c245a79" />
     </Col>
   </Row>
 )
