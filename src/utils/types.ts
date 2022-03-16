@@ -8,6 +8,13 @@ type DeepReadonly<T> = T extends (infer R)[]
   ? { readonly [P in keyof T]: DeepReadonly<T[P]> }
   : T
 
+type JsonValue =
+  | boolean
+  | number
+  | string
+  | readonly JsonValue[]
+  | { readonly [x: string]: JsonValue }
+
 type SetState<T> = Dispatch<SetStateAction<T>>
 
-export type { DeepReadonly, SetState }
+export type { DeepReadonly, JsonValue, SetState }

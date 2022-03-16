@@ -1,12 +1,8 @@
 import type { DependencyList } from "react"
 import { useState, useEffect } from "react"
 
-type JsonValue =
-  | boolean
-  | number
-  | string
-  | readonly JsonValue[]
-  | { readonly [x: string]: JsonValue }
+import { baseUrl } from "../../globals"
+import type { JsonValue } from "../types"
 
 type UseFetchOptions = Readonly<{
   parameters?: { readonly [k: string]: string }
@@ -28,8 +24,6 @@ type UseFetchReturnValue<T> =
       isLoading: true
       value: undefined
     }
-
-const baseUrl = "http://localhost:5000"
 
 const loadingState = {
   error: undefined,
