@@ -9,6 +9,7 @@ const generalRules = {
   "max-statements": "off",
   "no-underscore-dangle": "off",
   "prettier/prettier": "error",
+  "putout/putout": "off",
   "sonarjs/cognitive-complexity": "off",
   "sort-keys-fix/sort-keys-fix": ["error", "asc", { natural: true }],
 

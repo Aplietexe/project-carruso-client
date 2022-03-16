@@ -1,5 +1,3 @@
-// for some reason the generic arrow function causes putout to bug
-// eslint-disable-next-line putout/putout
 import type { DependencyList } from "react"
 import { useState, useEffect } from "react"
 
