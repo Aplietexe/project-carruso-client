@@ -5,6 +5,7 @@ import type { DeepReadonly } from "../../utils/types"
 type RequestFormRadioProps = DeepReadonly<{
   fieldName: string
   id: string
+  onChange: () => void
   options: string[]
 }>
 
@@ -12,6 +13,7 @@ const RequestFormRadio = ({
   fieldName,
   id,
   options,
+  onChange,
 }: RequestFormRadioProps) => (
   <FormGroup>
     <FormLabel>{fieldName}:</FormLabel>
@@ -21,6 +23,7 @@ const RequestFormRadio = ({
         key={option}
         label={option}
         name={id}
+        onChange={onChange}
         type="radio"
         value={option}
       />
