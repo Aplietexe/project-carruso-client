@@ -86,12 +86,13 @@ const Category = ({ displayName, category }: CategoryProps) => {
         setSort={setSort}
       />
       <Gallery className="mt-3">
-        {processedCars?.map((car) => (
+        {processedCars?.map(({ _id, image, price, title }) => (
           <CategoryCarCard
-            image={car.image}
-            key={car._id}
-            price={car.price}
-            title={car.title}
+            id={_id}
+            image={image}
+            key={_id}
+            price={price}
+            title={title}
           />
         ))}
       </Gallery>

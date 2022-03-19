@@ -10,12 +10,9 @@ import styled from "styled-components"
 
 import carrusoLogo from "../../assets/images/header/carruso-logo.webp"
 import SearchForm from "../../components/SearchForm"
+import StyledLink from "../../components/StyledLink"
 
-const StyledLink = styled(Nav.Link)`
-  color: var(--bs-primary) !important;
-  font-weight: 600;
-  text-align: center;
-`
+import NavLink from "./NavLink"
 
 const StyledContainer = styled(Container)`
   width: 97%;
@@ -46,7 +43,9 @@ const Header = () => {
       <Navbar bg="light" expand="md">
         <StyledContainer fluid>
           <Navbar.Brand className="me-0">
-            <ImageComponent className="py-3" fluid src={carrusoLogo} />
+            <StyledLink to="/">
+              <ImageComponent className="py-3" fluid src={carrusoLogo} />
+            </StyledLink>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -54,9 +53,9 @@ const Header = () => {
               className="w-100 justify-content-evenly my-2 my-md-0"
               navbarScroll
             >
-              <StyledLink>CARRUSO SEMINUEVOS</StyledLink>
-              <StyledLink>CARRUSO UTILITARIOS</StyledLink>
-              <StyledLink>CARRUSO NUEVOS</StyledLink>
+              <NavLink to="/category/seminew">CARRUSO SEMINUEVOS</NavLink>
+              <NavLink to="/category/utility">CARRUSO UTILITARIOS</NavLink>
+              <NavLink to="/category/new">CARRUSO NUEVOS</NavLink>
             </Nav>
             <StyledSearchForm
               placeholder="Encuentra tu próximo auto"
