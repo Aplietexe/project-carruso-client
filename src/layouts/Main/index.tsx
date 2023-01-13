@@ -9,7 +9,9 @@ import FraudProtection from "../../pages/FraudProtection"
 import Contact from "../../pages/Contact"
 import CreditRequest from "../../pages/CreditRequest"
 import Category from "../../pages/Category"
-import CarRoute from "../../routers/CarRouter"
+import Cars from "../../pages/admin/Cars"
+import Car from "../../pages/Car"
+import EditCar from "../../pages/admin/Cars/EditCar"
 
 const seminewCategory = (
   <Category category="seminew" displayName="Carruso Seminuevos" />
@@ -28,7 +30,10 @@ const privacyNotice = <PrivacyNotice />
 const warranty = <Warranty />
 const contact = <Contact />
 const creditRequest = <CreditRequest />
-const carRoute = <CarRoute />
+const car = <Car />
+
+const cars = <Cars />
+const editCar = <EditCar />
 
 const Main = () => (
   <Row as="main">
@@ -44,7 +49,10 @@ const Main = () => (
         <Route element={warranty} path="warranty" />
         <Route element={contact} path="contact" />
         <Route element={creditRequest} path="credit-request" />
-        <Route element={carRoute} path="car/:id" />
+        <Route element={car} path="car/:id" />
+
+        <Route element={cars} path="admin/cars" />
+        <Route element={editCar} path="car/edit/:id" />
       </Routes>
     </Col>
   </Row>

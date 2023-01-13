@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import { useFetch } from "../../utils/hooks"
 import PageTitle from "../../components/PageTitle"
+import type { BasicDetailsCar } from "../../utils/types"
 
 import CategoryCarCard from "./CategoryCarCard"
 import CategoryOptions from "./CategoryOptions"
@@ -12,14 +13,6 @@ import type { Sort } from "./types"
 type CategoryProps = Readonly<{
   category: string
   displayName: string
-}>
-
-type BasicDetailsCar = Readonly<{
-  _id: string
-  date: number
-  image: string
-  price: number
-  title: string
 }>
 
 const carMatchesSearch = (car: BasicDetailsCar, search: string): boolean => {
@@ -75,7 +68,7 @@ const Category = ({ displayName, category }: CategoryProps) => {
   }, [value, search, sort])
 
   if (error !== undefined) return <p>{error}</p>
-  if (isLoading) return <div>Loading</div>
+  if (isLoading) return <div />
 
   return (
     <Container className="my-5">

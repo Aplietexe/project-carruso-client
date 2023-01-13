@@ -1,1 +1,6 @@
-export { formatNumber, formatPrice } from "./formatters"
+export {
+  formatNumber,
+  formatPrice,
+  formatCategory,
+  formatDatetime,
+} from "./formatters"

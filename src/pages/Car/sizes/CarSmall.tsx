@@ -1,11 +1,11 @@
 import { Row, Col } from "react-bootstrap"
 
+import type { DetailledCar } from "../../../utils/types"
 import CarCarousel from "../CarCarrousel"
 import CreditSimulator from "../CreditSimulator"
 import InfoGallery from "../InfoGallery"
 import MainCarInfo from "../MainCarInfo"
 import RequestButton from "../RequestButton"
-import type { DetailledCar } from "../types"
 
 const CarSmall = ({ details, images, price, title }: DetailledCar) => (
   <Row className="mb-5">
