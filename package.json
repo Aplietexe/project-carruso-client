@@ -48,7 +48,7 @@
   },
   "scripts": {
     "start": "cross-env ESLINT_NO_DEV_ERRORS=true react-scripts start",
-    "build": "cross-env GENERATE_SOURCEMAP=false INLINE_RUNTIME_CHUNK=false react-scripts build"
+    "build": "cross-env DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false INLINE_RUNTIME_CHUNK=false react-scripts build"
   },
   "browserslist": {
     "production": [
