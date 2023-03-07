@@ -20,6 +20,6 @@ For tooling, this project uses TypeScript, Babel with several plugins for perfor
 
 The repo with the backend of this project is at [aplietexe/project-carruso-server](https://github.com/aplietexe/project-carruso-server).
 
-The project didn't go through at the end because of limited funds, which is why it is unpolished and most of the admin functionality is missing. What is build of the admin panel can be accessed at [/admin/cars](https://carruso-client.vercel.app/admin/cars).
+The project didn't go through at the end because of limited funds, which is why it is unpolished and most of the admin functionality is missing. What is built of the admin panel can be accessed at [/admin/cars](https://carruso-client.vercel.app/admin/cars).
 
 There is a live version running [here](https://carruso-client.vercel.app/).
